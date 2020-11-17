@@ -1,0 +1,557 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E5B473A3-9295-4E10-A145-BA163FCF20BA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestProject</RootNamespace>
+    <AssemblyName>TestProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Web Tools\Packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminApproveView.aspx" />
+    <Content Include="AdminConfirmMentor.aspx" />
+    <Content Include="AdminConfirmSkillSet.aspx" />
+    <Content Include="AdminConfirmStudent.aspx" />
+    <Content Include="AdminCreateSkillSet.aspx" />
+    <Content Include="AdminCreateMentor.aspx" />
+    <Content Include="AdminCreateStudentAccount.aspx" />
+    <Content Include="AdminMain.aspx" />
+    <Content Include="AdminMenu.ascx" />
+    <Content Include="AdminStatusApproval.aspx" />
+    <Content Include="AdminTemplate.Master" />
+    <None Include="packages.config" />
+    <Content Include="AdminUploadStudent.aspx" />
+    <Content Include="HomePageAbout.aspx" />
+    <Content Include="HomePageStudents.aspx" />
+    <Content Include="Images\Admin.png" />
+    <Content Include="Images\Director.jpg" />
+    <Content Include="Images\female1.jpg" />
+    <Content Include="Images\female2.jpg" />
+    <Content Include="Images\Home.png" />
+    <Content Include="Images\köle.png" />
+    <Content Include="Images\male1.jpg" />
+    <Content Include="Images\male2.jpg" />
+    <Content Include="Images\male3.jpg" />
+    <Content Include="Images\mentor.png" />
+    <Content Include="Images\Project_1_Poster.jpg" />
+    <Content Include="Images\Project_2_Poster.jpg" />
+    <Content Include="Images\Project_3_Poster.jpg" />
+    <Content Include="Images\Project_4_Poster.jpg" />
+    <Content Include="Images\sch-map.jpg" />
+    <Content Include="Images\Student.png" />
+    <Content Include="MentorApproveEdit.aspx" />
+    <Content Include="MentorConfirmPasswordChange.aspx" />
+    <Content Include="MentorCreateSuggestion.aspx" />
+    <Content Include="MentorPostSuggestions2.aspx" />
+    <Content Include="MentorPostSuggestions4.aspx" />
+    <Content Include="MentorViewandReply.aspx" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="StudentDeleteMember.aspx" />
+    <Content Include="StudentTemplate.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MentorApproveStudentPortfolio.aspx" />
+    <Content Include="MentorChange.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="HomePageDirectorMessage.aspx" />
+    <Content Include="HomePageMain.aspx" />
+    <Content Include="HomePageMenu.ascx" />
+    <Content Include="Login.aspx" />
+    <Content Include="MentorMain.aspx" />
+    <Content Include="MentorMenu.ascx" />
+    <Content Include="MentorPostSuggestions.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="MentorTemplate.Master" />
+    <Content Include="HomePage.Master" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="MentorSearch.aspx" />
+    <Content Include="MentorView.aspx" />
+    <Content Include="StudentAcknowledge.aspx" />
+    <Content Include="StudentAcknowledgeConfirm.aspx" />
+    <Content Include="StudentCreateWork.aspx" />
+    <Content Include="StudentEditProfile.aspx" />
+    <Content Include="StudentEditWorks.aspx" />
+    <Content Include="StudentMain.aspx" />
+    <Content Include="StudentMenu.ascx" />
+    <Content Include="StudentProjects.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminApproveView.aspx.cs">
+      <DependentUpon>AdminApproveView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminApproveView.aspx.designer.cs">
+      <DependentUpon>AdminApproveView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminConfirmMentor.aspx.cs">
+      <DependentUpon>AdminConfirmMentor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminConfirmMentor.aspx.designer.cs">
+      <DependentUpon>AdminConfirmMentor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminConfirmSkillSet.aspx.cs">
+      <DependentUpon>AdminConfirmSkillSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminConfirmSkillSet.aspx.designer.cs">
+      <DependentUpon>AdminConfirmSkillSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminConfirmStudent.aspx.cs">
+      <DependentUpon>AdminConfirmStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminConfirmStudent.aspx.designer.cs">
+      <DependentUpon>AdminConfirmStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateSkillSet.aspx.cs">
+      <DependentUpon>AdminCreateSkillSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateSkillSet.aspx.designer.cs">
+      <DependentUpon>AdminCreateSkillSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateMentor.aspx.cs">
+      <DependentUpon>AdminCreateMentor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateMentor.aspx.designer.cs">
+      <DependentUpon>AdminCreateMentor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateStudentAccount.aspx.cs">
+      <DependentUpon>AdminCreateStudentAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateStudentAccount.aspx.designer.cs">
+      <DependentUpon>AdminCreateStudentAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMain.aspx.cs">
+      <DependentUpon>AdminMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMain.aspx.designer.cs">
+      <DependentUpon>AdminMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenu.ascx.cs">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.ascx.designer.cs">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminStatusApproval.aspx.cs">
+      <DependentUpon>AdminStatusApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminStatusApproval.aspx.designer.cs">
+      <DependentUpon>AdminStatusApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTemplate.Master.cs">
+      <DependentUpon>AdminTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTemplate.Master.designer.cs">
+      <DependentUpon>AdminTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUploadStudent.aspx.cs">
+      <DependentUpon>AdminUploadStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUploadStudent.aspx.designer.cs">
+      <DependentUpon>AdminUploadStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageAbout.aspx.cs">
+      <DependentUpon>HomePageAbout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageAbout.aspx.designer.cs">
+      <DependentUpon>HomePageAbout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageStudents.aspx.cs">
+      <DependentUpon>HomePageStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageStudents.aspx.designer.cs">
+      <DependentUpon>HomePageStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor.cs" />
+    <Compile Include="MentorApproveEdit.aspx.cs">
+      <DependentUpon>MentorApproveEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorApproveEdit.aspx.designer.cs">
+      <DependentUpon>MentorApproveEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorApproveStudentPortfolio.aspx.cs">
+      <DependentUpon>MentorApproveStudentPortfolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorApproveStudentPortfolio.aspx.designer.cs">
+      <DependentUpon>MentorApproveStudentPortfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorChange.aspx.cs">
+      <DependentUpon>MentorChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorChange.aspx.designer.cs">
+      <DependentUpon>MentorChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageDirectorMessage.aspx.cs">
+      <DependentUpon>HomePageDirectorMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageDirectorMessage.aspx.designer.cs">
+      <DependentUpon>HomePageDirectorMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorConfirmPasswordChange.aspx.cs">
+      <DependentUpon>MentorConfirmPasswordChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorConfirmPasswordChange.aspx.designer.cs">
+      <DependentUpon>MentorConfirmPasswordChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorCreateSuggestion.aspx.cs">
+      <DependentUpon>MentorCreateSuggestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorCreateSuggestion.aspx.designer.cs">
+      <DependentUpon>MentorCreateSuggestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorPostSuggestions2.aspx.cs">
+      <DependentUpon>MentorPostSuggestions2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorPostSuggestions2.aspx.designer.cs">
+      <DependentUpon>MentorPostSuggestions2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorPostSuggestions4.aspx.cs">
+      <DependentUpon>MentorPostSuggestions4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorPostSuggestions4.aspx.designer.cs">
+      <DependentUpon>MentorPostSuggestions4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorStudent.cs" />
+    <Compile Include="MentorSuggestions.cs" />
+    <Compile Include="MentorViewandReply.aspx.cs">
+      <DependentUpon>MentorViewandReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorViewandReply.aspx.designer.cs">
+      <DependentUpon>MentorViewandReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project.cs" />
+    <Compile Include="Reply.cs" />
+    <Compile Include="SkillSet.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="HomePage.Master.cs">
+      <DependentUpon>HomePage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.Master.designer.cs">
+      <DependentUpon>HomePage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageMain.aspx.cs">
+      <DependentUpon>HomePageMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageMain.aspx.designer.cs">
+      <DependentUpon>HomePageMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageMenu.ascx.cs">
+      <DependentUpon>HomePageMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePageMenu.ascx.designer.cs">
+      <DependentUpon>HomePageMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorMain.aspx.cs">
+      <DependentUpon>MentorMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorMain.aspx.designer.cs">
+      <DependentUpon>MentorMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorMenu.ascx.cs">
+      <DependentUpon>MentorMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorMenu.ascx.designer.cs">
+      <DependentUpon>MentorMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MentorTemplate.Master.cs">
+      <DependentUpon>MentorTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorTemplate.Master.designer.cs">
+      <DependentUpon>MentorTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MentorPostSuggestions.aspx.cs">
+      <DependentUpon>MentorPostSuggestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorPostSuggestions.aspx.designer.cs">
+      <DependentUpon>MentorPostSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MentorSearch.aspx.cs">
+      <DependentUpon>MentorSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorSearch.aspx.designer.cs">
+      <DependentUpon>MentorSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAcknowledge.aspx.cs">
+      <DependentUpon>StudentAcknowledge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentAcknowledge.aspx.designer.cs">
+      <DependentUpon>StudentAcknowledge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAcknowledgeConfirm.aspx.cs">
+      <DependentUpon>StudentAcknowledgeConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentAcknowledgeConfirm.aspx.designer.cs">
+      <DependentUpon>StudentAcknowledgeConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCreateWork.aspx.cs">
+      <DependentUpon>StudentCreateWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentCreateWork.aspx.designer.cs">
+      <DependentUpon>StudentCreateWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDeleteMember.aspx.cs">
+      <DependentUpon>StudentDeleteMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentDeleteMember.aspx.designer.cs">
+      <DependentUpon>StudentDeleteMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEditProfile.aspx.cs">
+      <DependentUpon>StudentEditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentEditProfile.aspx.designer.cs">
+      <DependentUpon>StudentEditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEditWorks.aspx.cs">
+      <DependentUpon>StudentEditWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentEditWorks.aspx.designer.cs">
+      <DependentUpon>StudentEditWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentMain.aspx.cs">
+      <DependentUpon>StudentMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentMain.aspx.designer.cs">
+      <DependentUpon>StudentMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentMenu.ascx.cs">
+      <DependentUpon>StudentMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentMenu.ascx.designer.cs">
+      <DependentUpon>StudentMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentProjects.aspx.cs">
+      <DependentUpon>StudentProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentProjects.aspx.designer.cs">
+      <DependentUpon>StudentProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Students.cs" />
+    <Compile Include="MentorView.aspx.cs">
+      <DependentUpon>MentorView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MentorView.aspx.designer.cs">
+      <DependentUpon>MentorView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentTemplate.Master.cs">
+      <DependentUpon>StudentTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentTemplate.Master.designer.cs">
+      <DependentUpon>StudentTemplate.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56181</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56181/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
